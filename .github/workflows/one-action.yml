@@ -1,12 +1,15 @@
 name: One Workflow
-on: workflow_dispatch #Make sure it will manual workflow
+
+on: 
+  workflow_dispatch  # Enables manual triggering of the workflow
+
 jobs:
   first-job:
-    run-on: ubuntu-latest       # Runners are the machines that execute jobs in a GitHub Actions workflow.
+    runs-on: ubuntu-latest  # ✅ Corrected from 'run-on' to 'runs-on'
+    
     steps:
       - name: Print greeting
         run: echo "Hello World"
+
       - name: Print goodbye
         run: echo "Bye See You soon"
-        
-        
